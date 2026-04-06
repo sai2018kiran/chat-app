@@ -1,0 +1,18 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Message {
+  id                   String   @id @default(uuid())
+  content              String
+  senderId             String
+  createdAt            DateTime @default(now())
+  isPinned             Boolean  @default(false)
+  deletedFor           String   @default("[]") // JSON string of user IDs
+  isDeletedForEveryone Boolean  @default(false)
+}
