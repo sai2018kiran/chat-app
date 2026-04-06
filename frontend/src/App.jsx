@@ -3,8 +3,8 @@ import { io } from 'socket.io-client';
 import { format } from 'date-fns';
 import { Send, Trash2, Trash, Pin, MessageSquareOff } from 'lucide-react';
 
-const SOCKET_URL = 'http://localhost:3001';
-const API_URL = 'http://localhost:3001/api';
+const SOCKET_URL = 'https://chat-app-qsok.onrender.com';
+const API_URL = 'https://chat-app-qsok.onrender.com/api';
 
 const App = () => {
   const [messages, setMessages] = useState([]);
